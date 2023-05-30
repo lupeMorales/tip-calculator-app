@@ -1,0 +1,46 @@
+:root {
+  --primaryColor: hsl(172, 67%, 45%);
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Space Mono", monospace;
+}
+main {
+  background-color: var(--grayishCyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1 {
+  width: 50%;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--veryDarkCyan);
+}
+.container {
+  height: auto;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 20px;
+}
+.container__result {
+  background-color: var(--veryDarkCyan);
+  border-radius: 15px;
+  padding: 20px;
+  color: var(--veryLightGrayishCyan);
+}

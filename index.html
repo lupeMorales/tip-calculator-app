@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&family=Space+Mono:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>splitter</h1>
+      <div class="container">
+        <section class="container__data">
+          <form action="" class="form">
+            <label for="bill" class="h2"> Bill</label>
+            <input
+              type="number"
+              value="€"
+              id="bill"
+              class="form__input js-bill"
+            />
+            <p class="h2">select tip %</p>
+            <div class="form__buttonSet">
+              <button class="button js-buttonPercent" value="5">5%</button>
+              <button class="button js-buttonPercent" value="10">10%</button>
+              <button class="button js-buttonPercent" value="15">15%</button>
+              <button class="button js-buttonPercent" value="25">25%</button>
+              <button class="button js-buttonPercent" value="50">50%</button>
+              <input type="text" class="form__input--custom" />
+            </div>
+            <label for="people" class="h2"
+              >Number of People <span class="js-alert"></span
+            ></label>
+            <input
+              type="number"
+              value=""
+              id="people"
+              class="form__input js-people"
+            />
+          </form>
+        </section>
+        <section class="container__result">
+          <div class="result">
+            <div>
+              <p>tip amount</p>
+              <p>/ person</p>
+            </div>
+            <p class="amountResult js-tipAmount">0,00€</p>
+          </div>
+          <div class="result">
+            <div>
+              <p>total</p>
+              <p>/ person</p>
+            </div>
+            <p class="amountResult js-total">0,00€</p>
+          </div>
+          <button class="button--large js-btnReset">reset</button>
+        </section>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://lupemorales.github.io/portfolio/" target="_blank"
+          >Lupe Morales</a
+        >.
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
