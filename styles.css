@@ -97,13 +97,31 @@ html {
   text-transform: uppercase;
 }
 .form__input {
+  padding: 20px;
+}
+.form__input--bill {
   height: 35px;
   border: none;
   border-radius: 6px;
   background-color: var(--veryLightGrayishCyan);
   outline-color: var(--primaryColor);
   color: var(--veryDarkCyan);
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 2ch;
 }
+.form__input--people {
+  height: 35px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--veryLightGrayishCyan);
+  outline-color: var(--primaryColor);
+  color: var(--veryDarkCyan);
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 2ch;
+}
+
 .container__result {
   background-color: var(--veryDarkCyan);
   border-radius: 15px;
