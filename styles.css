@@ -6,6 +6,11 @@
   --lightGrayishCyan: hsl(185, 41%, 84%);
   --veryLightGrayishCyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --xs: 1.2rem;
+  --sm: 1.4rem;
+  --md: 1.8rem;
+  --lg: 2rem;
+  --xl: 2.5rem;
 }
 
 * {
@@ -18,29 +23,150 @@ html {
   font-size: 62.5%;
   font-family: "Space Mono", monospace;
 }
-main {
+.mainContainer {
+  /*   height: 100vh;
   background-color: var(--grayishCyan);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
+  gap: 50px; */
+  height: 100vh;
+  background-color: var(--grayishCyan);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
 }
-h1 {
-  width: 50%;
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--veryDarkCyan);
+.logo {
+  width: 90px;
+  object-fit: fill;
+  margin-top: 50px;
 }
 .container {
-  height: auto;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
   background-color: var(--white);
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  padding: 0 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+.buttonSet {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 120px);
+  gap: 15px;
+  place-content: center;
+  margin-top: 8px;
+}
+.button {
+  height: 35px;
+  background-color: var(--veryDarkCyan);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-family: "Space Mono", monospace;
+  font-size: var(--md);
+}
+.button__custom {
+  height: 35px;
+  background-color: var(--veryLightGrayishCyan);
+  color: var(--veryDarkCyan);
+  border: none;
+  border-radius: 6px;
+  font-family: "Space Mono", monospace;
+  font-size: var(--md);
+  text-transform: capitalize;
+  text-align: center;
+  outline-color: var(--primaryColor);
+}
+.button--large {
+  width: 100%;
+  height: 35px;
+  background-color: var(--primaryColor);
+  color: var(--veryDarkCyan);
+  border: none;
+  border-radius: 6px;
+  font-family: "Space Mono", monospace;
+  font-size: var(--md);
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+.form__input {
+  height: 35px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--veryLightGrayishCyan);
+  outline-color: var(--primaryColor);
+  color: var(--veryDarkCyan);
 }
 .container__result {
   background-color: var(--veryDarkCyan);
   border-radius: 15px;
   padding: 20px;
   color: var(--veryLightGrayishCyan);
+  margin: 25px 0;
+}
+.container__title {
+  font-size: var(--sm);
+  color: var(--darkGrayishCyan);
+  text-transform: capitalize;
+  font-weight: bold;
+  margin: 20px 0 8px;
+}
+.container__title--result {
+  font-size: var(--sm);
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--veryLightGrayishCyan);
+  margin-top: 18px;
+}
+.container__title--subtitle {
+  font-size: var(--xs);
+  color: var(--grayishCyan);
+}
+.result {
+  display: flex;
+  justify-content: space-between;
+}
+.amountResult {
+  font-size: var(--xl);
+  color: var(--primaryColor);
+  margin-top: 18px;
+}
+@media (width > 641px) {
+  .mainContainer {
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    height: auto;
+    width: 80%;
+    padding: 20px;
+  }
+  .container__data {
+    height: 100%;
+    width: 50%;
+  }
+  .container__result {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    margin: 25px 0;
+  }
+  .button--large {
+    transform: translateY(140px);
+  }
+}
+@media (width > 1024px) {
+  .button--large {
+    transform: translateY(100px);
+  }
 }
