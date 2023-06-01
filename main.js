@@ -3,6 +3,7 @@
 const bill = document.querySelector(".js-bill");
 const nPerson = document.querySelector(".js-person");
 const allButtons = document.querySelectorAll(".js-buttonPercent");
+const btnCustom = document.querySelector("#custom");
 const tipPerPerson = document.querySelector(".js-tipAmount");
 const totalPerPerson = document.querySelector(".js-total");
 const btnReset = document.querySelector(".js-btnReset");
@@ -14,7 +15,9 @@ let isActive = false;
 function reset() {
   const defaultAmount = "";
   const resetValue = "0.00€";
+  const customDefault = "custom";
 
+  btnCustom.innerHTML = customDefault;
   bill.value = defaultAmount;
   nPerson.value = defaultAmount;
   totalPerPerson.innerHTML = resetValue;
@@ -56,6 +59,15 @@ function btnValue() {
   });
 }
 
+function getCustomValue() {
+  percentage = btnCustom.value;
+  calculate();
+}
+
 btnValue(allButtons);
+allButtons.forEach((btn) => {
+  btn.addEventListener("click", calculate);
+});
+btnCustom.addEventListener("change", custom);
 form.addEventListener("change", calculate);
 btnReset.addEventListener("click", reset);
