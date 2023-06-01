@@ -9,6 +9,7 @@ const btnReset = document.querySelector(".js-btnReset");
 
 const form = document.querySelector(".form");
 let percentage = 0;
+let isActive = false;
 
 function reset() {
   const defaultAmount = "";
@@ -18,15 +19,24 @@ function reset() {
   nPerson.value = defaultAmount;
   totalPerPerson.innerHTML = resetValue;
   tipPerPerson.innerHTML = resetValue;
+  isActive = false;
+  console.log(isActive);
 }
 function calculate() {
-  const totalTip = parseFloat(((percentage * bill.value) / 100).toFixed(2));
-  const tip = parseFloat((totalTip / nPerson.value).toFixed(2));
-  const billPerPerson = parseFloat(bill.value / nPerson.value);
+  console.log("onchange");
+  const totalTip = Number(((percentage * bill.value) / 100).toFixed(2));
+  const tip = Number((totalTip / nPerson.value).toFixed(2));
+  const billPerPerson = Number(bill.value / nPerson.value);
 
-  if (bill.value === "" || nPerson.value === "" || percentage === 0) {
+  if (
+    bill.value === "" ||
+    nPerson.value === "" ||
+    percentage === 0 ||
+    !isActive
+  ) {
     totalPerPerson.innerHTML = "0.00€";
     console.log("rellena");
+    console.log(isActive);
   } else {
     tipPerPerson.innerHTML = `${tip.toFixed(2)}€`;
     totalPerPerson.innerHTML = `${(billPerPerson + tip).toFixed(2)}€`;
@@ -38,7 +48,10 @@ function btnValue() {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       percentage = e.target.value;
-      /* console.log("percentage", percentage); */
+      e.target.classList.add("active");
+      isActive = true;
+      console.log("percentage", percentage);
+      console.log(isActive);
     });
   });
 }
