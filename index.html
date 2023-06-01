@@ -26,32 +26,32 @@
       <img src="./images/logo.svg" class="logo"></img>
       <div class="container">
         <section class="container__data">
-          <form action="" class="form">
+          <form  class="form">
               <label for="bill" class="container__title"> Bill</label>
               <input
-                type="number"
-                value="€"
+                type="text"
+                value=""
                 id="bill"
-                class="form__input--bill js-bill"
-              />
+                class="form__input--bill js-bill"/>
           
             <p class="container__title">select tip %</p>
             <div class="buttonSet">
-              <button class="button js-buttonPercent" value="5">5%</button>
-              <button class="button js-buttonPercent" value="10">10%</button>
-              <button class="button js-buttonPercent" value="15">15%</button>
-              <button class="button js-buttonPercent" value="25">25%</button>
-              <button class="button js-buttonPercent" value="50">50%</button>
-              <input type="text" class="button__custom" placeholder="custom"/>
+              <button class="button js-buttonPercent" id="five"  value="5">5%</button>
+              <button class="button js-buttonPercent" id="ten"  value="10">10%</button>
+              <button class="button js-buttonPercent" id="fifteen"  value="15">15%</button>
+              <button class="button js-buttonPercent" id="twentyfive"  value="25">25%</button>
+              <button class="button js-buttonPercent" id="fifty"  value="50">50%</button>
+              <input type="text" class="button__custom" id="custom" placeholder="custom"/>
             </div>
             <label for="people" class="container__title"
-              >Number of People<span class="js-alert"></span
+              >Number of Person<span class="js-alert"></span
             ></label>
             <input
-              type="number"
+              type="text"
               value=""
               id="people"
-              class="form__input--people js-people"
+              class="form__input--people js-person"
+           
             />
           </form>
         </section>
@@ -70,7 +70,7 @@
             </div>
             <p class="amountResult js-total">0,00€</p>
           </div>
-          <button class="button--large js-btnReset">reset</button>
+          <button class="button__large js-btnReset">reset</button>
         </section>
       </div>
      <!--  <div class="attribution">

@@ -23,14 +23,11 @@ html {
   font-size: 62.5%;
   font-family: "Space Mono", monospace;
 }
+.active {
+  background-color: var(--primaryColor);
+  color: var(--darkGrayishCyan);
+}
 .mainContainer {
-  /*   height: 100vh;
-  background-color: var(--grayishCyan);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 50px; */
   height: 100vh;
   background-color: var(--grayishCyan);
   display: flex;
@@ -84,7 +81,7 @@ html {
   text-align: center;
   outline-color: var(--primaryColor);
 }
-.button--large {
+.button__large {
   width: 100%;
   height: 35px;
   background-color: var(--primaryColor);
@@ -98,6 +95,8 @@ html {
 }
 .form__input {
   padding: 20px;
+  /*   text-align: right;
+  font-size: var(--lg); */
 }
 .form__input--bill {
   height: 35px;
@@ -109,6 +108,9 @@ html {
   background-image: url("./images/icon-dollar.svg");
   background-repeat: no-repeat;
   background-position: 2ch;
+  text-align: right;
+  font-size: var(--lg);
+  padding: 20px;
 }
 .form__input--people {
   height: 35px;
@@ -120,6 +122,9 @@ html {
   background-image: url("./images/icon-person.svg");
   background-repeat: no-repeat;
   background-position: 2ch;
+  text-align: right;
+  font-size: var(--lg);
+  padding: 20px;
 }
 
 .container__result {
@@ -179,12 +184,12 @@ html {
     width: 50%;
     margin: 25px 0;
   }
-  .button--large {
+  .button__large {
     transform: translateY(140px);
   }
 }
 @media (width > 1024px) {
-  .button--large {
+  .button__large {
     transform: translateY(100px);
   }
 }
