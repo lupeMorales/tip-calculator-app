@@ -18,15 +18,15 @@ function reset() {
   const customDefault = "custom";
 
   btnCustom.innerHTML = customDefault;
+  btnCustom.value = "";
   bill.value = defaultAmount;
   nPerson.value = defaultAmount;
   totalPerPerson.innerHTML = resetValue;
   tipPerPerson.innerHTML = resetValue;
   isActive = false;
-  console.log(isActive);
 }
+
 function calculate() {
-  console.log("onchange");
   const totalTip = Number(((percentage * bill.value) / 100).toFixed(2));
   const tip = Number((totalTip / nPerson.value).toFixed(2));
   const billPerPerson = Number(bill.value / nPerson.value);
@@ -68,6 +68,6 @@ btnValue(allButtons);
 allButtons.forEach((btn) => {
   btn.addEventListener("click", calculate);
 });
-btnCustom.addEventListener("change", custom);
+btnCustom.addEventListener("change", getCustomValue);
 form.addEventListener("change", calculate);
 btnReset.addEventListener("click", reset);
