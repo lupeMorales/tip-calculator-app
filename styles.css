@@ -24,6 +24,16 @@ html {
   font-size: 62.5%;
   font-family: "Space Mono", monospace;
 }
+.atribution {
+  color: var(--veryDarkCyan);
+  font-size: var(--sm);
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primaryColor);
+  font-size: var(--sm);
+}
 .aligne {
   display: flex;
   align-items: baseline;
@@ -31,8 +41,8 @@ html {
 }
 .warning {
   color: var(--detailsColor);
-  font-size: var(--sm);
-  padding-right: 20px;
+  font-size: var(--xs);
+  padding-right: 10px;
   outline-color: var(--primaryColor);
 }
 .warning-input {
@@ -44,7 +54,7 @@ p .active {
 }
 .mainContainer {
   height: 100vh;
-  background-color: var(--grayishCyan);
+  background-color: var(--lightGrayishCyan);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -108,7 +118,7 @@ p .active {
 .button__large {
   width: 100%;
   height: 35px;
-  background-color: var(--primaryColor);
+  background-color: var(--grayishCyan);
   color: var(--veryDarkCyan);
   border: none;
   border-radius: 6px;
@@ -118,10 +128,11 @@ p .active {
   text-transform: uppercase;
   cursor: pointer;
 }
+.button__large:hover {
+  background-color: var(--primaryColor);
+}
 .form__input {
   padding: 20px;
-  /*   text-align: right;
-  font-size: var(--lg); */
 }
 .form__input--bill {
   height: 35px;
