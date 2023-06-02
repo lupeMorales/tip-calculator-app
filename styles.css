@@ -24,15 +24,17 @@ html {
   font-size: 62.5%;
   font-family: "Space Mono", monospace;
 }
-.atribution {
+.attribution {
   color: var(--veryDarkCyan);
-  font-size: var(--sm);
+  font-size: var(--xm);
 }
+
 a {
   cursor: pointer;
   text-decoration: none;
   color: var(--primaryColor);
-  font-size: var(--sm);
+  font-size: var(--xs);
+  text-align: center;
 }
 .aligne {
   display: flex;
@@ -199,10 +201,16 @@ p .active {
   color: var(--primaryColor);
   margin-top: 18px;
 }
+@media (width < 768px) {
+  .attribution {
+    display: none;
+  }
+}
 @media (width > 641px) {
   .mainContainer {
     justify-content: center;
   }
+
   .container {
     display: flex;
     justify-content: space-between;
