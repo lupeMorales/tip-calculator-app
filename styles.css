@@ -6,6 +6,7 @@
   --lightGrayishCyan: hsl(185, 41%, 84%);
   --veryLightGrayishCyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+  --detailsColor: #e57c23;
   --xs: 1.2rem;
   --sm: 1.4rem;
   --md: 1.8rem;
@@ -23,7 +24,21 @@ html {
   font-size: 62.5%;
   font-family: "Space Mono", monospace;
 }
-.active {
+.aligne {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.warning {
+  color: var(--detailsColor);
+  font-size: var(--sm);
+  padding-right: 20px;
+  outline-color: var(--primaryColor);
+}
+.warning-input {
+  border: solid 1px var(--detailsColor);
+}
+p .active {
   background-color: var(--primaryColor);
   color: var(--darkGrayishCyan);
 }
@@ -68,6 +83,11 @@ html {
   border-radius: 6px;
   font-family: "Space Mono", monospace;
   font-size: var(--md);
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--primaryColor);
+  color: var(--veryDarkCyan);
 }
 .button__custom {
   height: 35px;
@@ -80,6 +100,10 @@ html {
   text-transform: capitalize;
   text-align: center;
   outline-color: var(--primaryColor);
+  cursor: pointer;
+}
+.button__custom:hover {
+  border: solid 2px var(--primaryColor);
 }
 .button__large {
   width: 100%;
@@ -92,6 +116,7 @@ html {
   font-size: var(--md);
   margin-top: 40px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .form__input {
   padding: 20px;
@@ -111,6 +136,7 @@ html {
   text-align: right;
   font-size: var(--lg);
   padding: 20px;
+  cursor: pointer;
 }
 .form__input--people {
   height: 35px;
@@ -125,6 +151,7 @@ html {
   text-align: right;
   font-size: var(--lg);
   padding: 20px;
+  cursor: pointer;
 }
 
 .container__result {

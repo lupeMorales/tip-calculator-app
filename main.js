@@ -7,6 +7,7 @@ const btnCustom = document.querySelector("#custom");
 const tipPerPerson = document.querySelector(".js-tipAmount");
 const totalPerPerson = document.querySelector(".js-total");
 const btnReset = document.querySelector(".js-btnReset");
+const alert = document.querySelector(".warning");
 
 const form = document.querySelector(".form");
 let percentage = 0;
@@ -24,6 +25,17 @@ function reset() {
   totalPerPerson.innerHTML = resetValue;
   tipPerPerson.innerHTML = resetValue;
   isActive = false;
+  alert.innerHTML = "";
+  nPerson.style.border = "none";
+}
+function showWarning() {
+  if (nPerson.value === "0") {
+    alert.innerHTML = "Can't be zero";
+    nPerson.style.border = "solid 2px #e57c23";
+  } else {
+    alert.innerHTML = "";
+    nPerson.style.border = "none";
+  }
 }
 
 function calculate() {
@@ -33,7 +45,7 @@ function calculate() {
 
   if (
     bill.value === "" ||
-    nPerson.value === "" ||
+    nPerson.value == 0 ||
     percentage === 0 ||
     !isActive
   ) {
@@ -44,6 +56,7 @@ function calculate() {
     tipPerPerson.innerHTML = `${tip.toFixed(2)}€`;
     totalPerPerson.innerHTML = `${(billPerPerson + tip).toFixed(2)}€`;
   }
+  showWarning();
 }
 
 function btnValue() {
