@@ -50,8 +50,6 @@ function calculate() {
     !isActive
   ) {
     totalPerPerson.innerHTML = "0.00€";
-    console.log("rellena");
-    console.log(isActive);
   } else {
     tipPerPerson.innerHTML = `${tip.toFixed(2)}€`;
     totalPerPerson.innerHTML = `${(billPerPerson + tip).toFixed(2)}€`;
@@ -66,8 +64,6 @@ function btnValue() {
       percentage = e.target.value;
       e.target.classList.add("active");
       isActive = true;
-      console.log("percentage", percentage);
-      console.log(isActive);
     });
   });
 }

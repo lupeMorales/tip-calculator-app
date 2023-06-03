@@ -4,7 +4,17 @@
 
 ## Welcome! 👋
 
-This is my solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). I would like to say that I enjoyed it very much.
+This is my solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). 
+
+The challenge is to build out this tip calculator app and get it looking as close to the given design as possible.
+The users should be able to:
+- View the optimal layout for the app based on your device's screen size
+- View hover states for all interactive elements on the page
+- Calculate the correct tip and the total cost of the bill per person
+
+I would like to say that I enjoyed it very much.
+
+
 
 ## Table of contents
 
@@ -39,7 +49,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Code](https://github.com/lupeMorales/tip-calculator-app)
-- Live Site URL: [Demo](https://your-live-site-url.com)
+- Live Site URL: [Demo](https://github.com/lupeMorales/tip-calculator-app.git)
  
 ## Built with
 
